@@ -1,0 +1,15 @@
+PROGRAM FOR EG-LAB
+
+1. introduction to basic html elements............20 AUG
+	i. the use of formatting text 
+	ii. heading tags, h1,h2,....h6
+	iii. font details
+	iv. setting color, background color
+
+2. CREATE YOUR PROFILE Page, education details, hobbies, achievements, my details, etc in html............27 aug 2024
+
+3. design a webpage and embed various multimedia features, in webpage...........3 sept 2024
+
+4. design a timetable of your class, using table tags...........10 sept 2024
+
+5. create an html program list, ............17sept 2024
