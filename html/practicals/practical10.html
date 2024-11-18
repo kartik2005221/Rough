@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 10</title>
+    <style>
+
+        .transform-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /*square element */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px;
+        }
+
+        /* Apply transformations*/
+        .translate {
+            transform: translate(150px, 100px);
+        }
+
+        .scale {
+            transform: scale(1.5);
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+        }
+
+        .skew {
+            transform: skew(20deg, 10deg);
+        }
+
+        .original {
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"><u>2D Transformations Demonstration</u></h1>
+
+    <div class="transform-container">
+        <div>
+            <h3>Translation</h3>
+            <div class="square translate"></div>
+        </div>
+
+        <div>
+            <h3>Scaling</h3>
+            <div class="square scale"></div>
+        </div>
+
+        <div>
+            <h3>Rotation</h3>
+            <div class="square rotate"></div>
+        </div>
+
+        <div>
+            <h3>Skewing</h3>
+            <div class="square skew"></div>
+        </div>
+    </div><br><br><br><br><br><br>
+
+    <div class="transform-container">
+        <div>
+            <h3>Original block</h3>
+            <div class="square original"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

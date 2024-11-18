@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 9</title>
+    <!-- code isse code nhi ho sakta -->
+    <style>
+        body {
+            text-align: center;
+            background-image: url(background-image.png);
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        li a {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+        }
+
+        li a:hover {
+            background: #28A745;
+        }
+
+        li a:active {
+            background: #DC3545;
+        }
+
+        input:focus {
+            border-color: #007BFF;
+        }
+
+        li a:visited {
+            color: #6c757d;
+        }
+
+        button:not(:hover) {
+            background: #6A82FB;
+        }
+
+        button:hover {
+            background: #FC5C7D;
+            color: white;
+        }
+
+        button,
+        input {
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>CSS Pseudo-classes and Backgrounds</u></h1>
+    <p>Explore how different pseudo-classes work in CSS:</p><br><br>
+
+    <h2>Hover over the links field to see effects.</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul><br><br>
+
+    <h2>Hover over the input field to see effects.</h2>
+    <input type="text" placeholder="Focus me to change border color"><br><br>
+
+    <h2>Hover over the button field to see effects.</h2>
+    <button>Click me!</button>
+
+</body>
+</html>
