@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery Stop Animation Example</h1>
+    <hr><br><br>
+
+    <div id="box"></div><br><br><br><br><br><br><br>
+    <p>Press below buttons to start and stop the animation...</p>
+    <button id="start">Start Animation</button>
+    <button id="stop">Stop Animation</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#start").click(function () {
+                $("#box").animate({
+                    left: "500px"
+                }, 5000);
+            });
+            $("#stop").click(function () {
+                $("#box").stop(true, false);
+            });
+        });
+    </script>
+
+</body>
+</html>

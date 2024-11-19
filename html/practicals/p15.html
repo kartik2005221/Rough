@@ -1,0 +1,50 @@
+<!-- Write an angular javascript program to define the use of routing. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 15</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    
+    <div>
+        <h1>Welcome to AngularJS Routing Example</h1>
+
+        <nav>
+            <a ui-sref="home">Home</a> |
+            <a ui-sref="about">About</a> |
+            <a ui-sref="contact">Contact</a>
+        </nav>
+
+        <div ui-view></div>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', ['ui.router']);
+
+        app.config(function ($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise('/home');
+
+            $stateProvider
+                .state('home', {
+                    url: '/home',
+                    template: '<h2>Home Page</h2><p>Welcome to the home page.</p>'
+                })
+                .state('about', {
+                    url: '/about',
+                    template: '<h2>About Page</h2><p>This is the about page.</p>'
+                })
+                .state('contact', {
+                    url: '/contact',
+                    template: '<h2>Contact Page</h2><p>Here is the contact page.</p>'
+                });
+        });
+    </script>
+
+</body>
+
+</html>

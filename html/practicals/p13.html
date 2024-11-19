@@ -1,0 +1,25 @@
+<!-- Write a JavaScript program to convert temperatures to and from celsius, Fahrenheit. -->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Temperature Converter</h3>
+  <input id="temp" type="number" placeholder="Enter temperature">
+  <select id="unit">
+    <option value="C">Celsius</option>
+    <option value="F">Fahrenheit</option>
+  </select>
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      let temp = parseFloat(document.getElementById('temp').value);
+      let unit = document.getElementById('unit').value;
+      let result = unit === "C" 
+        ? `${(temp * 9/5 + 32).toFixed(2)} °F` 
+        : `${((temp - 32) * 5/9).toFixed(2)} °C`;
+      document.getElementById('result').innerText = result;
+    }
+  </script>
+</body>
+</html>

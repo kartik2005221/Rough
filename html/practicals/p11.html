@@ -1,0 +1,36 @@
+<!-- Design signup form to validate username, password, and phone numbers etc using Java script. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Signup Form</title>
+</head>
+
+<body>
+  <h2>Signup Form</h2>
+  <form id="signupForm">
+    <label>Username: <input type="text" id="username"></label><br><br>
+    <label>Email: <input type="email" id="email"></label><br><br>
+    <label>Password: <input type="password" id="password"></label><br><br>
+    <label>Phone: <input type="text" id="phone"></label><br><br>
+    <button type="button" onclick="validateForm()">Sign Up</button>
+  </form>
+  <script>
+    function validateForm() {
+      let username = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let phone = document.getElementById("phone").value;
+
+      if (username.length < 3) return alert("Username must be at least 3 characters.");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return alert("Invalid email.");
+      if (!/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password))
+        return alert("Password must be 8+ chars, include an uppercase, number, and special char.");
+      if (!/^\d{10}$/.test(phone)) return alert("Phone must be 10 digits.");
+
+      alert("Signup successful!");
+    }
+  </script>
+</body>
+
+</html>

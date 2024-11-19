@@ -1,0 +1,46 @@
+<!-- Write an angular javascript program to make a shopping list. -->
+<!DOCTYPE html>
+<html ng-app="shoppingApp">
+<head>
+    <title>Shopping List</title>
+    <!-- dont modify below address, in any situation, it should be as it is -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        input,
+        button {margin: 5px 0;}
+        ul {list-style-type: none;
+            padding: 0;}
+        li {margin: 5px 0;}
+    </style>
+</head>
+
+<body ng-controller="ShoppingController">
+    <h1>Shopping List</h1>
+    <input type="text" ng-model="newItem" placeholder="Add an item" />
+    <button ng-click="addItem()">Add</button>
+    <ul>
+        <li ng-repeat="item in items track by $index">
+            {{ item }}
+            <button ng-click="removeItem($index)">Remove</button>
+        </li>
+    </ul>
+
+    <script>
+        angular.module('shoppingApp', [])
+            .controller('ShoppingController', function ($scope) {
+                $scope.items = [];
+                $scope.newItem = '';
+
+                $scope.addItem = function () {
+                    if ($scope.newItem.trim() !== '') {
+                        $scope.items.push($scope.newItem.trim());
+                        $scope.newItem = '';
+                    }
+                };
+
+                $scope.removeItem = function (index) {
+                    $scope.items.splice(index, 1);
+                };
+            });
+    </script>
+</body></html>

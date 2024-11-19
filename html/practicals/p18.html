@@ -1,0 +1,44 @@
+<!-- Write a program to show how to retrieve checkbox value using jQuery. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 18</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .result {
+            margin-top: 20px;
+        }
+        </style>
+</head>
+
+<body>
+    <h1>Checkbox Value Retrieval with jQuery</h1>
+    
+    <h2>Select Options</h2>
+    <label><input type="checkbox" value="Option 1"> Option 1</label><br>
+    <label><input type="checkbox" value="Option 2"> Option 2</label><br>
+    <label><input type="checkbox" value="Option 3"> Option 3</label><br><br>
+
+    <button id="getCheckboxValue">Get Selected Options</button>
+
+    <div class="result">
+        <p id="checkboxValue">Selected Options: None</p>
+    </div>
+
+    <script>
+        $('#getCheckboxValue').click(function () {
+            let selectedOptions = [];
+            $('.myCheckbox:checked').each(function () {
+                selectedOptions.push($(this).val());
+            });
+            if (selectedOptions.length > 0) {
+                $('#checkboxValue').text('Selected Options: ' + selectedOptions.join(', '));
+            } else {
+                $('#checkboxValue').text('Selected Options: None');
+            }
+        });
+    </script>
+</body>
+
+</html>

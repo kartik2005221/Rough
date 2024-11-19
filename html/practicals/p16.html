@@ -1,0 +1,42 @@
+<!-- Write an angular javascript program to show the use of animation. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 16</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .move {
+            transform: translateX(300px);
+        }
+    </style>
+</head>
+
+<body ng-app="animationApp" ng-controller="AnimationController">
+    <h1>Angular Javascript Program to show Animation's Use</h1>
+
+    <div class="box" ng-class="{'move': move}"></div><br>
+    <button ng-click="toggleAnimation()">Toggle Animation</button>
+    <p>Click above button, to see the animation</p>
+
+    <script>
+        var app = angular.module('animationApp', []);
+
+        app.controller('AnimationController', function ($scope) {
+            $scope.move = false;
+
+            $scope.toggleAnimation = function () {
+                $scope.move = !$scope.move;
+            };
+        });
+    </script>
+</body>
+
+</html>

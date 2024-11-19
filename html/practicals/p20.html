@@ -1,0 +1,71 @@
+<!-- Design your personal portfolio using html,css and js etc. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Himanshu's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 8px;
+        }
+        button {
+            padding: 5px 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header><h1>Himanshu's Portfolio</h1></header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm Himanshu, a B.Tech student passionate about coding.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C Language</li>
+            <li>Web Development</li>
+            <li>Exploring Real Life Problems</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Project 1: Solar Panel Tracker</p>
+        <p>Project 2: WebPage Development</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required><br><br>
+            <input type="email" id="email" placeholder="Your Email" required><br><br>
+            <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            alert(`Message sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+            document.querySelector('form').reset();
+        }
+    </script>
+</body></html>
