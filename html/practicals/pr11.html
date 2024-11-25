@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .capital {
+            color: #007BFF;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        select {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country to its Capital</h1>
+    <label for="countries">Country:</label>
+    <select id="countries" onchange="showCapital()">
+        <option value="">--Select a Country--</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Japan">Japan</option>
+        <option value="France">France</option>
+    </select>
+    <span class="capital" id="capital"></span>
+
+    <script>
+        const capitals = {
+            India: "New Delhi",
+            USA: "Washington, D.C.",
+            Japan: "Tokyo",
+            France: "Paris"
+        };
+
+        function showCapital() {
+            const country = document.getElementById('countries').value;
+            const capital = capitals[country] || '';
+            document.getElementById('capital').textContent = capital;
+        }
+    </script>
+</body>
+</html>

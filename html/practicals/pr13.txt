@@ -1,0 +1,27 @@
+Introduction to Dreamweaver
+Dreamweaver is a web development tool for designing and coding websites using HTML, CSS, JavaScript, etc. It provides Code View, Design View, and Live Preview for responsive web design.
+
+Setting Up a Site in Dreamweaver
+Create New Site
+
+Go to Site > New Site.
+Name the site and select a folder for storing files.
+File Structure
+
+Create subfolders like images, css, and js inside the site folder.
+New HTML File
+
+File > New > HTML. Save as index.html.
+Add CSS
+
+Create a CSS file in the css folder, link it using:
+html
+Copy code
+<link rel="stylesheet" href="css/style.css">
+Preview Site
+
+Click Live View or F12 to preview in a browser.
+Remote Server (Optional)
+
+Use Site > Manage Sites > Servers to add an FTP server for uploading.
+This summarizes the practical steps for Dreamweaver setup.

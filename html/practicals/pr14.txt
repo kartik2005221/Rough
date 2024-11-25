@@ -1,0 +1,24 @@
+Introduction to WordPress
+WordPress is a popular Content Management System (CMS) for creating websites and blogs. It is user-friendly, supports plugins and themes, and allows both beginners and developers to build responsive, customizable sites.
+
+Creating a WordPress Page
+Install WordPress
+
+Download WordPress from wordpress.org.
+Extract files and upload to your server (e.g., using XAMPP for localhost).
+Create a database in phpMyAdmin.
+Run the WordPress installer by accessing http://localhost/yourfoldername.
+Login to Admin Panel
+
+Go to http://localhost/yourfoldername/wp-admin.
+Login with the credentials set during installation.
+Create a Page
+
+Navigate to Pages > Add New.
+Enter a title and add content using the Gutenberg editor (blocks for text, images, etc.).
+Publish the Page
+
+Click Publish to make the page live.
+View the Page
+
+Visit http://localhost/yourfoldername/pagename.
