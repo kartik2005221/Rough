@@ -2,14 +2,14 @@
 #include<stdio.h>
 int main()
 {
- int num1,num2,num3,min;
+ int num1,num2,num3,max;
  printf("Enter value of three numbers :");
  scanf("%d %d %d",&num1,&num2,&num3);
- min=num1;
- if(num2<min)
- min=num2;
- if(num3<min)
- min=num3;
- printf("\nThe smallest value is %d",min);
+ max=num1;
+ if(num2<max)
+ max=num2;
+ if(num3<max)
+ max=num3;
+ printf("\nThe smallest value is %d",max);
  return 0;
 }
